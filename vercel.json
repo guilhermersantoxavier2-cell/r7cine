@@ -1,0 +1,51 @@
+{
+  "version": 2,
+  "framework": "vite",
+  "installCommand": "npm install --prefix stcine-web-app",
+  "buildCommand": "npm run build --prefix stcine-web-app",
+  "outputDirectory": "stcine-web-app/dist",
+  "functions": {
+    "api/[...path].js": {
+      "maxDuration": 60
+    },
+    "api/vod/[id].js": {
+      "maxDuration": 60
+    },
+    "api/vod/[id]/similar.js": {
+      "maxDuration": 60
+    },
+    "api/vod/[id]/stream.js": {
+      "maxDuration": 60
+    },
+    "api/stream/hls.js": {
+      "maxDuration": 60
+    },
+    "api/stream/segment.js": {
+      "maxDuration": 60
+    },
+    "api/stream/media.js": {
+      "maxDuration": 60
+    },
+    "api/stream/subtitle.js": {
+      "maxDuration": 60
+    },
+    "api/stream/image.js": {
+      "maxDuration": 60
+    },
+    "api/stream/download.js": {
+      "maxDuration": 60
+    },
+    "api/stream/download/progress.js": {
+      "maxDuration": 60
+    },
+    "api/stream/download/cancel.js": {
+      "maxDuration": 60
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/((?!api(?:/|$)).*)",
+      "destination": "/index.html"
+    }
+  ]
+}
